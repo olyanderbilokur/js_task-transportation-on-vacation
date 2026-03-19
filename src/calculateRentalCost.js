@@ -11,9 +11,13 @@ function calculateRentalCost(days) {
 
   if (days >= 7) {
     return costForAllDay - saleForSevenDays;
-  } else if (days >= 3) {
+  }
+
+  if (days >= 3) {
     return costForAllDay - saleForThreeDays;
-  } else {
+  }
+
+  if (days < 3) {
     return costForAllDay;
   }
 }
